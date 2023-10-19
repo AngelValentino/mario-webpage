@@ -1,4 +1,4 @@
-body, ul, li, h1, h2, a {
+body, ul, li, h1, h2, h3, a {
     margin: 0;
     padding: 0;
     font-family: tahoma, sans-serif;
@@ -19,15 +19,49 @@ header {
     background-color: #F63232;
     padding: 20px 0;
     text-align: center;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
     color: white;
     padding: 6px 13px;
     border: 8px solid white;
-    display: inline-block;
     border-radius: 50px;
+
 }
+
+header h3 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header h3:last-child {
+    color: white;
+    padding: 6px 13px;
+    border: 6px solid white;
+    border-radius: 50px;
+    margin-right: 5vw;
+} 
+
+header h3:last-child:hover {
+    background: #F4F4F4;
+    color: #4B4B4B;
+    border: 6px solid #4B4B4B;
+    cursor: pointer;
+}
+
+.hidden-h3 {
+    visibility: hidden;
+    color: white;
+    padding: 6px 13px;
+    border: 6px solid white;
+    border-radius: 50px;
+    margin-left: 5vw;
+}
+
 
 /*BANNER*/
 
@@ -213,7 +247,7 @@ article p::first-line {
     
 }
 
-/* JOIN SECTION*/
+/*JOIN SECTION*/
 
 .join {
     text-align: center;
@@ -261,6 +295,16 @@ footer {
 
 /*HEADER AND NAVIGATION MENU*/
 
+@media only screen and (max-width: 520px) {
+    .hidden-h3 {
+        display: none;
+    }
+
+    header h1 {
+        margin-left: 5vw;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     /*HEADER*/
     
@@ -299,7 +343,7 @@ footer {
 
 }
 
-/*BANNER WELCOME TITLE AND IMAGES*/
+/*HEADER, BANNER-WELCOME TITLE AND IMAGES*/
 
 @media only screen and (max-width: 1400px) {
     .banner h2 {
@@ -314,6 +358,7 @@ footer {
 }
 
 @media only screen and (max-width: 850px) {
+    /*BANNER*/
     .welcome-text {
         position: relative;
         text-align: center;
