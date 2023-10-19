@@ -1,17 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marioclub Account</title>
     <link rel="stylesheet" href="styles2.css">
 </head>
+
 <body>
     <header>
-        <h3>Marioclub</h3>
-        <h3>Marioclub-account</h3>
-        <h3>New Account</h3>
+        <a href="index.html">
+            <h4>Marioclub</h4>
+        </a>
+        <p>Marioclub Account</p>
+        <a>
+            <p>New Account</p>
+        </a>
     </header>
-    <main></main>
+    <main>
+        <h1>Marioclub Account</h1>
+        <form class="login-container">
+            <div class="login-box">
+                <p>Login with a password</p>
+                <div class="input-container">
+                    <label for="email">Email</label>
+                    <input required placeholder="Email or username" id="email" type="email" name="email" />
+                </div>
+                <div class="input-container">
+                    <label for="password">Password</label>
+                    <input required placeholder="Password" id="password" type="password" name="password" />
+                </div>
+            </div>
+            <div class="button">
+                <input class="button" type="submit" value="Login" />
+            </div>
+        </form>
+        <a href="">
+            <p>Forgot your password?</p>
+        </a>
+        <hr />
+        <div class="other-accounts">
+            <p>Login with</p>
+            <div class="google-account">
+                <a href="https://accounts.google.com/" target="_blank">
+                    <img src="images/google-icon.png" alt="" />
+                    <p>Google</p>
+                    <img class="hidden-icon" src="images/google-icon.png" alt="" />
+                </a>
+            </div>
+            <div class="apple-account">
+                <a href="https://appleid.apple.com/sign-in" target="_blank">
+                    <img src="images/apple-icon.png" alt="" />
+                    <p>Login with Apple</p>
+                    <img class="hidden-icon" src="images/apple-icon.png" alt="" />
+                </a>
+            </div>
+        </div>
+        <div class="new-account">
+            <p>You don't have an account?</p>
+            <a>
+                <p>Make a new Marioclub account</p>
+            </a>
+        </div>
+    </main>
 </body>
+
 </html>
