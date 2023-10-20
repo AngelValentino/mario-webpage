@@ -56,6 +56,16 @@ header > h4 {
     border-radius: 50px;
 }
 
+/*VERTICAL LINE*/
+
+.input-container label::before {
+    content: "︳";
+    font-weight: bold;
+    text-shadow: 0px 1px, 1px 0px, 1px 1px;
+    margin-left: 2px;
+    
+}
+
 /*MAIN*/
 
 main {
@@ -128,12 +138,133 @@ main h1 {
     padding: 10px 14px;
     border-radius: 30px;
     border: 1px solid black;
+    transition: opacity 0.4s;
 }
+
+.apple-account:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.google-account:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+/*SIGN UP INFO*/
+
+.sign-up-info ::placeholder {
+    opacity: 0.7;
+}
+
+.sign-up-info form {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding: 44px 130px;
+    border: 10px solid #fff;
+    border-radius: 8px;
+}
+
+.input-container > * {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin: 30px 0 0;
+}
+
+.input-container div input, select  {
+    width: 60%;
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 2px solid #dfdfdf;
+    font-size: 0.9rem;
+}
+
+.input-container div label {
+    flex-grow: 1;
+    text-align: start;
+    font-size: 0.9rem;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #dfdfdf;
+    color: #dfdfdf
+}
+
+.terms-and-conditions {
+    margin: 30px 0 0;
+}
+
+.terms-and-conditions-inner a {
+    color: rgb(99, 102, 240);
+    transition: color 0.5s;
+}
+
+.terms-and-conditions-inner a:hover {
+    color: rgb(158, 159, 240);
+}
+
+.terms-and-conditions-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    padding: 15px 0;
+}
+
+.terms-and-conditions-inner input {
+    margin-right: 15px;
+    transform: scale(1.4);
+}
+
+.terms-and-conditions-inner label {
+    font-size: 0.8rem;
+}
+
+.button {
+    text-align: center;
+}
+
+.button input {
+    padding: 9px 35px;
+    margin: 30px 0 0;
+    border: none;
+    border-radius: 30px;
+    background-color: #aaaaaa;
+    color: #d8d8d8;
+    font-size: 1rem;
+}
+
+form:valid .button input {
+    background-color: #F63232;
+    color: white;
+  }
+
+form:valid .button input:hover {
+    cursor: pointer;
+    background-color: #f75555;
+}  
+
+form input:invalid:focus, form select:invalid:focus{
+    background-color: #ffe1e1;
+    border: 2px solid #F63232;
+    outline: none;
+}
+
+form input:required:valid, form select:required:valid {
+    border: 2px solid #71d300;
+}
+
 
 /*MEDIA QUERIES*/
 
+/*OTHER ACCOUNTS*/
+
 @media only screen and (min-width: 1000px) {
-    .google-account, sign up.apple-accountsign upad {
+    .google-account, .apple-account {
         max-width: 420px;
     }
 }
@@ -144,7 +275,7 @@ main h1 {
     }
 }
 
-@media only screen and (max-width: 820px) {
+@media only screen and (max-width: 840px) {
     .google-account, .apple-account {
         max-width: 270px;
     }
@@ -153,7 +284,26 @@ main h1 {
 @media only screen and (max-width: 660px) {
     .google-account, .apple-account {
         max-width: 200px;
-    }  
+    }
+    
+    /*SIGN UP INFO*/
+
+    .input-container > * {
+        flex-flow: column;
+        margin: 30px 0 0;
+    }
+
+    .input-container div input, select  {
+        width: 100%;
+    }
+    
+    .input-container div {
+        align-items: start;
+    }
+
+    .input-container div label {
+        margin: 0 0 10px;
+    }
 }
 
 @media only screen and (max-width: 520px) {
@@ -187,5 +337,23 @@ main h1 {
 
     header {
         justify-content: center;
+    }
+}
+
+/*SIGN UP INFO*/
+
+@media only screen and (max-width: 980px) {
+    .sign-up-info form {
+        margin-top: 30px;
+        margin-bottom: 50px;
+        padding: 44px 70px;
+        border: 10px solid #fff;
+        border-radius: 8px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .sign-up-info form {
+        padding: 44px 50px;
     }
 }

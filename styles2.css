@@ -41,7 +41,7 @@ header a:nth-of-type(1) h4:hover {
 
 header a:nth-of-type(2) p {
     margin-right: 4vw;
-    margin-left: 30px;
+    margin-left: 15px;
 }
 
 header a:nth-of-type(2) {
@@ -81,6 +81,13 @@ main h1 {
 }
 
 /*LOGIN*/
+
+.login-container label::before {
+    content: "︳";
+    font-weight: bold;
+    text-shadow: 0px 1px, 1px 0px, 1px 1px;
+    margin-left: 2px;
+}
 
 form {
     max-width: 450px;
@@ -151,6 +158,13 @@ form:valid .button input:hover {
     cursor: pointer;
     background-color: #f75555;
 }  
+
+/*ARROW BEFORE LINK*/
+
+main > a p::before, header a:nth-of-type(2) p::before {
+    content: "➜ ";
+    color: #4B4B4B;
+ }
 
 /*PASSWORD MAIN*/
 

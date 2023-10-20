@@ -200,6 +200,11 @@ article p::first-line {
     margin-left: 20px;
 }
 
+.join-button a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .avatar-images {
     flex-grow: 1;
 }
