@@ -7,11 +7,16 @@ body, ul, li, h1, h2, h3, a, p {
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
+
 }
 
-#introduction, #news, #games, #contact {
+#introduction, #news, #games {
     scroll-margin-top: 200px;
   }
+
+#contact  {
+    scroll-margin-top: 75px;
+}
 
 /*MARIOCLUB HEADER*/
 
@@ -32,6 +37,16 @@ header {
     text-align: center;
     justify-content: space-between;
     align-items: center;
+}
+
+@media only screen and (max-height: 400px) {
+    header {
+        position: relative;
+    }
+
+    nav {
+        top: 0px !important;
+    }
 }
 
 header h1 {
@@ -455,6 +470,123 @@ article p::first-line {
     }
 }
 
+/*CONTACT SECTION*/
+
+.contact {
+    margin: 80px 0 0;
+}
+
+.contact {
+    position: relative;
+}
+
+.contact img {
+    display: block;
+    width: 100%;
+    height: 1000px;
+    object-fit: cover;
+}
+
+.form-container {
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    position: absolute;
+    max-width: 500px;
+    color: #4B4B4B;
+    padding: 20px 40px;
+    border-radius: 10px;
+    background-color: #f4f4f4bb;
+    border: 1px solid #333;
+}
+
+.form-container h2 {
+    margin: 0 0 35px;
+    font-size: 2.25rem;
+}
+
+.contact form input {
+    border-radius: 30px;
+}
+
+.contact form textarea {
+    border-radius: 10px;
+}
+
+.contact form textarea {
+    font-family: tahoma, sans-serif;
+}
+
+.contact form input, .contact form textarea {
+    width: 100%;
+    border: 4px solid white;
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 1.5rem;
+}
+
+.contact form input::placeholder, .contact form textarea::placeholder {
+    opacity: 0.7;
+}
+
+.contact form input:focus, .contact form textarea:focus {
+    border: 4px dashed #4B4B4B;
+    outline: none;
+}
+
+.contact form {
+    text-align: center;
+}
+
+.contact form input:last-of-type {
+    display: inline-block;
+    width: auto;
+    border: none;
+    padding: 9px 35px;
+    margin: 20px 0 0;
+    background-color: #aaaaaa;
+    color: #d8d8d8;
+}
+
+.contact form:valid input:last-of-type {
+    background-color: #F63232;
+    color: white;
+}
+
+.contact form:valid input:last-of-type:hover {
+    cursor: pointer;
+    background-color: #f75555;
+}
+
+@media only screen and (max-width: 650px) {
+
+    .form-container {
+        padding-top: 50px;
+        width: 100%;
+        height: 100%;
+        max-width: 600px;
+        border: none;
+
+    }
+
+    .contact{
+        border-radius: 10px;
+    }
+
+    .contact img {
+        max-height: 800px;
+        border-radius: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 450px) {
+    .form-container {
+        padding: 50px 30px 20px;
+    }
+}
 /*JOIN SECTION*/
 
 .join {
@@ -472,7 +604,7 @@ article p::first-line {
     font-size: 1.2rem;
 }
 
-form input{
+.join form input{
     margin: 20px 0;
     padding: 10px 20px;
     font-size: 1.5rem;
@@ -480,12 +612,12 @@ form input{
     border: 4px solid white;
   }
 
-  form input:focus {
+.join form input:focus {
     border: 4px dashed #4B4B4B;
     outline: none;
   }
 
-  form input:valid {
+.join form input:valid {
     border: 4px solid #71d300;
   }
 
