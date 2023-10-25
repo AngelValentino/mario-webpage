@@ -39,16 +39,6 @@ header {
     align-items: center;
 }
 
-@media only screen and (max-height: 400px) {
-    header {
-        position: relative;
-    }
-
-    nav {
-        top: 0px !important;
-    }
-}
-
 header h1 {
     color: white;
     padding: 6px 13px;
@@ -116,14 +106,24 @@ header h3:last-child:hover {
     padding: 30px;
 }
 
+/*DROPDOWN MENU MOBILE*/
+
+.dropdown-menu input, .dropdown-menu label {
+    display: none;
+}
+
 /*NAVIGATION MENU*/
+
+.dropdown-menu {
+    position: sticky;
+    top: 107px;
+    z-index: 1;
+}
 
 nav {
     background-color: #F4F4F4;
     position: sticky;
-    top: 107px;
     padding: 20px;
-    z-index: 1;
 }
 
 nav ul {
@@ -264,6 +264,8 @@ article p::first-line {
     color: white;
     cursor: pointer;
 }
+
+    /*MEMBERS SECTION MEDIA QUERIES*/
 
 @media only screen and (max-width: 1000px) {
     .avatars-container-flex {
@@ -426,6 +428,8 @@ article p::first-line {
     cursor: pointer;
 }
 
+    /*GAMES SECTION MEDIA QUERIES*/
+
 @media only screen and (max-width: 900px) {
     .games-grid-container {
         --game-grid-cols: 2;
@@ -560,6 +564,8 @@ article p::first-line {
     background-color: #f75555;
 }
 
+/*CONTACT SECTION MEDIA QUERIES*/
+
 @media only screen and (max-width: 650px) {
 
     .form-container {
@@ -633,6 +639,17 @@ footer {
 
 /*MEDIA QUERIES*/
 
+/*NAVIGATION BAR FOR TILTED MOBILE SCREEN*/
+@media only screen and (max-height: 400px) {
+    header {
+        position: relative;
+    }
+
+    .dropdown-menu {
+        top: 0px !important;
+    }
+}
+
 /*HEADER AND NAVIGATION MENU*/
 
 @media only screen and (max-width: 520px) {
@@ -652,10 +669,57 @@ footer {
         position: static;
     }
 
+    /*DROPDOWN MENU MOBILE*/
+
+    .dropdown-menu input {
+        display: inline;
+    }
+
+    .dropdown-menu {
+        background-color: #F4F4F4;
+    }
+
+    .content-menu {
+        max-height: 0;
+        overflow: hidden;
+        padding: 0;
+        background-color: rgb(230, 230, 230);
+    }
+
+   .dropdown-menu input:checked ~ .content-menu  {
+        max-height: 500px;
+        padding: 10px;
+    }
+
+    .dropdown-menu label {
+        display: block;
+        font-size: 1.5rem;
+        background: url(images/icon-menu.png) no-repeat 2% center/40px;
+        /*background-size: 50px;*/
+        padding: 15px 0 15px 60px;
+        user-select: none;
+        border-bottom: 1px solid #aaaaaa88;
+    }
+
+    .dropdown-menu label:hover {
+        cursor: pointer;
+    }
+
+   .dropdown-menu input {
+        display: none;
+   }
+
+   .dropdown-menu input:checked ~ label {
+        background: url(images/icon-closed.png) no-repeat 2% center/40px;
+        /*background-size: 50px;*/
+   }
     /*NAVIGATION MENU*/
 
+    .dropdown-menu {
+        top: -1px;
+    }
+
     nav {
-        top: 0;
         padding: 10px;
     }
 
@@ -699,6 +763,7 @@ footer {
 
 @media only screen and (max-width: 850px) {
     /*BANNER*/
+
     .welcome-text {
         position: relative;
         text-align: center;
@@ -732,6 +797,7 @@ footer {
 
 
 /*NEWS SECTION*/
+
 @media only screen and (max-width: 1000px) {
    .image-grid-container {
     --grid-cols: 2;
