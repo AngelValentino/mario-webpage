@@ -21,7 +21,7 @@ body, ul, li, h1, h2, h3, a, p {
 /*MARIOCLUB HEADER*/
 
 body {
-    min-width: 360px;
+    min-width: fit-content;
 }
 
 header {
@@ -671,10 +671,6 @@ footer {
 
     /*DROPDOWN MENU MOBILE*/
 
-    .dropdown-menu input {
-        display: inline;
-    }
-
     .dropdown-menu {
         background-color: #F4F4F4;
     }
@@ -687,7 +683,7 @@ footer {
     }
 
    .dropdown-menu input:checked ~ .content-menu  {
-        max-height: 500px;
+        max-height: 100%;
         padding: 10px;
     }
 
@@ -704,10 +700,6 @@ footer {
     .dropdown-menu label:hover {
         cursor: pointer;
     }
-
-   .dropdown-menu input {
-        display: none;
-   }
 
    .dropdown-menu input:checked ~ label {
         background: url(images/icon-closed.png) no-repeat 2% center/40px;

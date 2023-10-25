@@ -248,11 +248,11 @@ form:valid .button input:hover {
     background-color: #f75555;
 }  
 
-form input:invalid:focus, form select:invalid:focus{
+/* form input:invalid:focus, form select:invalid:focus{
     background-color: #ffe1e1;
     border: 2px solid #F63232;
     outline: none;
-}
+} */
 
 form input:required:valid, form select:required:valid {
     border: 2px solid #71d300;
