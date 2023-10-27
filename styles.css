@@ -622,7 +622,7 @@ article p:first-of-type {
     margin: 0 0 10px;
 }
 
-.join form input{
+.join form input {
     margin: 20px 0;
     padding: 10px 20px;
     font-size: 1.5rem;
@@ -882,5 +882,13 @@ footer a:hover {
 @media only screen and (max-width: 600px) {
     #introduction, #news, #games, #contact {
         scroll-margin: 100px;
+    }
+}
+
+/*JOIN SECTION*/
+
+@media only screen and (max-width: 450px) {
+    .join form input {
+        font-size: 1.25rem;
     }
 }
