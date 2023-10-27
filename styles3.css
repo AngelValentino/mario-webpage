@@ -365,3 +365,10 @@ form input:required:valid, form select:required:valid {
         padding: 44px 30px;
     }
 }
+
+/*TILTED MOBILE SCREEN*/
+@media only screen and (max-height: 400px) {
+    html {
+        font-size: 20px;
+    }
+}

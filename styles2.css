@@ -304,3 +304,10 @@ hr {
         padding: 30px;
     }
 }
+
+/*TILTED MOBILE SCREEN*/
+@media only screen and (max-height: 400px) {
+    html {
+        font-size: 20px;
+    }
+}
