@@ -679,6 +679,14 @@ footer a:hover {
     .content-menu {
         border-bottom: 1px solid #aaaaaa88;
     }
+
+    #introduction, #news, #games {
+        scroll-margin-top: 100px;
+    }
+
+    #contact {
+        scroll-margin-top: 30px !important;
+    }
 }
 
 /*HEADER AND NAVIGATION MENU*/
