@@ -141,6 +141,7 @@ form div {
 }
 
 .button input {
+    font-size: 0.7rem;
     padding: 9px 20px;
     border: none;
     border-radius: 30px;
@@ -285,6 +286,12 @@ hr {
 @media only screen and (max-width: 500px) {
     header > p {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    html {
+        font-size: 20px;
     }
 }
 

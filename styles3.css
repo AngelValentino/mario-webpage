@@ -354,6 +354,10 @@ form input:required:valid, form select:required:valid {
     .sign-up-info form {
         padding: 44px 50px;
     }
+
+    html {
+        font-size: 20px;
+    }
 }
 
 @media only screen and (max-width: 300px) {
