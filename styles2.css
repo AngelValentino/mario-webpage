@@ -34,12 +34,6 @@ header a:nth-of-type(1) h4 {
     border-radius: 50px;
 }
 
-header a:nth-of-type(1) h4:hover {
-    background-color: #F63232;
-    color: white;
-    cursor: pointer;
-}
-
 header a:nth-of-type(2) p {
     margin-right: 4vw;
     margin-left: 15px;
@@ -51,11 +45,6 @@ header a:nth-of-type(2) {
 
 header a:nth-of-type(2):active {
     color: rgb(158, 159, 240);
-}
-
-header a:nth-of-type(2) p:hover {
-    text-decoration: underline;
-    cursor: pointer;
 }
 
 header a {
@@ -83,10 +72,10 @@ main h1 {
 
 /*LOGIN*/
 
- .login-container label {
+.login-container label {
     border-left: thick solid #333;
     padding-left: 10px;
- }
+}
 
 form {
     max-width: 450px;
@@ -154,10 +143,6 @@ form:valid .button input {
     color: white;
   }
 
-form:valid .button input:hover {
-    cursor: pointer;
-    background-color: #f75555;
-}  
 
 /*ARROW BEFORE LINK*/
 
@@ -176,14 +161,6 @@ main > a:nth-of-type(1) p {
 main > a:nth-of-type(1) {
     text-decoration: none;
     color: rgb(99, 102, 240);
-}
-
-main > a:hover {
-    text-decoration: underline;
-}
-
-main > a:active {
-    color: rgb(158, 159, 240);
 }
 
 hr {
@@ -225,11 +202,6 @@ hr {
     border-radius: 6px;
     margin-top: 10px;
     transition: opacity 0.4s;
-}
-
-.google-account:hover, .apple-account:hover {
-    opacity: 0.7;
-    cursor: pointer;
 }
 
 .apple-account {
@@ -275,13 +247,60 @@ hr {
     transition: background-color 0.25s;
 }
 
-.new-account a p:hover {
-    background-color: #bbbbbb;
-    cursor: pointer;
-}
+
 
 
 /*MEDIA QUERIES*/ 
+
+/*MEDIA QUERY FOR ONLY HOVER CAPABLE DEVICES*/
+
+@media screen and (hover: hover) {
+/*HEADER*/
+
+    header a:nth-of-type(1) h4:hover {
+        background-color: #F63232;
+        color: white;
+        cursor: pointer;
+    }
+    header a:nth-of-type(2) p:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+/*LOGIN*/
+
+    form:valid .button input:hover {
+        cursor: pointer;
+        background-color: #f75555;
+    }  
+
+/*PASWORD MAIN*/
+
+    main > a:hover {
+        text-decoration: underline;
+    }
+
+    main > a:active {
+        color: rgb(158, 159, 240);
+    }
+
+/*OTHER ACCOUNTS*/
+
+    .google-account:hover, .apple-account:hover {
+        opacity: 0.7;
+        cursor: pointer;
+    }
+
+/*NEW ACCOUNT*/
+
+    .new-account a p:hover {
+        background-color: #bbbbbb;
+        cursor: pointer;
+    }
+}
+
+/*END OF MEDIA QUERY FOR ONLY HOVER CAPABLE DEVICES*/
+
 
 @media only screen and (max-width: 500px) {
     header > p {

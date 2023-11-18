@@ -43,12 +43,6 @@ header a h4 {
     border-radius: 50px;
 }
 
-header a h4:hover {
-    background-color: #F63232;
-    color: white;
-    cursor: pointer;
-}
-
 header > h4 {
     visibility: hidden;
     margin-right: 4vw;
@@ -132,15 +126,6 @@ main h1 {
     transition: opacity 0.4s;
 }
 
-.apple-account:hover{
-    opacity: 0.7;
-    cursor: pointer;
-}
-
-.google-account:hover {
-    opacity: 0.6;
-    cursor: pointer;
-}
 
 /*SIGN UP INFO*/
 
@@ -199,10 +184,6 @@ hr {
     transition: color 0.5s;
 }
 
-.terms-and-conditions-inner a:hover {
-    color: rgb(158, 159, 240);
-}
-
 .terms-and-conditions-inner {
     display: flex;
     justify-content: center;
@@ -239,11 +220,6 @@ form:valid .button input {
     color: white;
   }
 
-form:valid .button input:hover {
-    cursor: pointer;
-    background-color: #f75555;
-}  
-
 
 /* INPUT COLOR RED WHEN FORM INVALID BUT DOESN'T STAY LIKE THAT AFTER CLICK BECAUSE THERES NEED OF JAVASCRIPT FOR THAT FUNCIONALITY
 form input:invalid:focus, form select:invalid:focus{
@@ -257,7 +233,44 @@ form input:required:valid, form select:required:valid {
 }
 
 
+
 /*MEDIA QUERIES*/
+
+/*MEDIA QUERY FOR ONLY HOVER CAPABLE DEVICES*/
+
+@media screen and (hover: hover) {
+/*HEADER*/
+
+    header a h4:hover {
+        background-color: #F63232;
+        color: white;
+        cursor: pointer;
+    }
+
+/*OTHER ACCOUNTS*/
+
+    .apple-account:hover{
+        opacity: 0.7;
+        cursor: pointer;
+    }
+
+    .google-account:hover {
+        opacity: 0.6;
+        cursor: pointer;
+    }
+
+/*SIGN UP INFO*/
+
+    .terms-and-conditions-inner a:hover {
+        color: rgb(158, 159, 240);
+    }
+    form:valid .button input:hover {
+        cursor: pointer;
+        background-color: #f75555;
+    }  
+}
+
+/*END OF MEDIA QUERY FOR ONLY HOVER CAPABLE DEVICES*/
 
 /*OTHER ACCOUNTS*/
 
